@@ -23,4 +23,9 @@ public class EmployeeController {
     public Employee createEmployee(@RequestBody Employee employee) {
         return service.saveEmployee(employee);
     }
+
+    @GetMapping("/{id}")
+    public Employee getEmployee(@PathVariable Integer id) {
+        return service.getEmployeeById(id);
+    }
 }
