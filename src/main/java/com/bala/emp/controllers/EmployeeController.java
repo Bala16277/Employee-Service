@@ -24,8 +24,15 @@ public class EmployeeController {
         return service.saveEmployee(employee);
     }
 
+
     @GetMapping("/{id}")
     public Employee getEmployee(@PathVariable Integer id) {
         return service.getEmployeeById(id);
+    }
+
+    @PutMapping("/{id}")
+    public Employee updateEmployee(@PathVariable Integer id, @RequestBody Employee employee) {
+        employee.setId(id);
+        return service.saveEmployee(employee);
     }
 }
