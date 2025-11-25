@@ -30,9 +30,15 @@ public class EmployeeController {
         return service.getEmployeeById(id);
     }
 
+
     @PutMapping("/{id}")
     public Employee updateEmployee(@PathVariable Integer id, @RequestBody Employee employee) {
         employee.setId(id);
         return service.saveEmployee(employee);
+    }
+
+    @DeleteMapping("/{id}")
+    public void deleteEmployee(@PathVariable Integer id) {
+        service.deleteEmployee(id);
     }
 }
