@@ -29,4 +29,9 @@ public class EmployeeController {
         employee.setId(id);
         return service.saveEmployee(employee);
     }
+
+    @GetMapping
+    public void display() {
+        System.out.println("inside display method");
+    }
 }
