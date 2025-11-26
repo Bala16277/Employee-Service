@@ -36,7 +36,12 @@ public class EmployeeController {
         employee.setId(id);
         return service.saveEmployee(employee);
     }
-
+  
+    @GetMapping("/display")
+    public void display() {
+        System.out.println("inside display method");
+    }
+      
     @DeleteMapping("/{id}")
     public void deleteEmployee(@PathVariable Integer id) {
         service.deleteEmployee(id);
