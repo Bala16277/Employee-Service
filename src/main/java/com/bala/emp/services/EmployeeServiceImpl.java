@@ -31,5 +31,9 @@ public class EmployeeServiceImpl implements EmployeeService {
     public void deleteEmployee(Integer id) {
         repository.deleteById(id);
     }
+
+    public List<Employee> getEmployeesByDepartment(String department) {
+        return repository.findByDepartment(department);
+    }
 }
 

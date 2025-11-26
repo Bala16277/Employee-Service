@@ -9,4 +9,5 @@ public interface EmployeeService {
     Employee getEmployeeById(Integer id);
     Employee saveEmployee(Employee employee);
     void deleteEmployee(Integer id);
+    List<Employee> getEmployeesByDepartment(String department);
 }
